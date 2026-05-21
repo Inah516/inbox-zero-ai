@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+
+body {
+  background:
+    radial-gradient(ellipse at top, rgba(245, 158, 11, 0.08), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(234, 88, 12, 0.05), transparent 60%),
+    #1a1410;
+}
+
+::selection { background: rgba(245, 158, 11, 0.25); color: #f5e9d3; }
+
+.markdown h1 { @apply text-2xl font-serif font-semibold mt-4 mb-2 text-paper; }
+.markdown h2 { @apply text-xl font-serif font-semibold mt-4 mb-2 text-ember; }
+.markdown h3 { @apply text-lg font-serif font-semibold mt-3 mb-1.5 text-flame; }
+.markdown p  { @apply leading-relaxed my-2 text-paper/90; }
+.markdown ul { @apply list-disc pl-5 my-2 space-y-1 text-paper/85; }
+.markdown ol { @apply list-decimal pl-5 my-2 space-y-1 text-paper/85; }
+.markdown strong { @apply text-paper; }
+.markdown code   { @apply bg-ink3 px-1.5 py-0.5 rounded text-sm text-ember font-mono; }
+.markdown a      { @apply text-ember underline decoration-dotted; }
+.markdown blockquote { @apply border-l-2 border-ember/40 pl-3 italic text-paper/70 my-2; }
+.markdown hr { @apply border-line my-3; }
+.markdown table { @apply text-sm my-2; }
+.markdown li input[type="checkbox"] { @apply mr-2 accent-ember; }
+
+.scroll-soft::-webkit-scrollbar { width: 6px; height: 6px; }
+.scroll-soft::-webkit-scrollbar-thumb { background: rgba(245, 158, 11, 0.3); border-radius: 3px; }
+.scroll-soft::-webkit-scrollbar-track { background: transparent; }
